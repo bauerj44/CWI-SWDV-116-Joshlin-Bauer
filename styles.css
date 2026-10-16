@@ -1,3 +1,17 @@
+.driving-video {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0 0 20px 0;
+}
+
+.driving-audio {
+  display: block;
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
 .hero {
 background-image: url("hero_1.jpg");
 background-size: cover;
