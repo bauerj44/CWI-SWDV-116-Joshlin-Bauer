@@ -196,4 +196,43 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
+.hero {
+  position: relative;
+}
+
+.rental-search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.rental-search h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.rental-search form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rental-search select, .rental-search input {
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.rental-search input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+
 
