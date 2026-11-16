@@ -233,6 +233,13 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
+.cars-page .featured-cars h2 {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
 
 
 

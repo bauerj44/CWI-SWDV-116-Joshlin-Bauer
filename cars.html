@@ -28,4 +28,21 @@
         </a>
 </nav>
 </header>
+
+<body class="cars-page">
+<main>
+    <selection class="featured-cars">
+        <h2>Available Cars</h2>
+
+        <div id="car-list" class="car-container"></div>
+    </selection>
+</main>
         <script src="script.js"></script>
+        <script src="main.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                listCars();
+            });
+        </script>
+</body>
