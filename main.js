@@ -172,6 +172,26 @@ function displayCars(carList) {
         carCard.appendChild(carType);
         carCard.appendChild(carDescription);
 
+        const rentButton = document.createElement("button");
+        rentButton.textContent = "Rent This Car";
+        rentButton.type = "button";
+
+        rentButton.addEventListener("click", function() {
+        const params = new URLSearchParams(window.location.search);
+
+        const rentalEvent = new CustomEvent("confirm-rental", {
+            detail: {
+                carType: car.type,
+                startDate: params.get("pickup"),
+                returnDate: params.get("return")
+            }
+        });
+
+        document.dispatchEvent(rentalEvent);
+    });
+
+        carCard.appendChild(rentButton);
+
         carContainer.appendChild(carCard);
     });
 }

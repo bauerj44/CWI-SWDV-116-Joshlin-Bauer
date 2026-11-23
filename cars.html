@@ -44,5 +44,38 @@
             document.addEventListener("DOMContentLoaded", function() {
                 listCars();
             });
+
+            document.addEventListener("confirm-rental", function(event) {
+                const rentalInfo = event.detail;
+
+                const dialog = document.createElement("dialog");
+
+            dialog.innerHTML = `<h2>Confirm Rental</h2> 
+                <p>Car Type: ${rentalInfo.carType}</p>
+                <p>Start Date: ${rentalInfo.startDate}</p>
+                <p>Return Date: ${rentalInfo.returnDate}</p>
+                <button id="confirm-button">Confirm</button>
+                <button id="cancel-button">Cancel</button>`;
+
+            document.body.appendChild(dialog);
+
+                const confirmButton = dialog.querySelector("#confirm-button");
+                const cancelButton = dialog.querySelector("#cancel-button");
+
+            confirmButton.addEventListener("click", function() {
+                console.log(rentalInfo);
+                dialog.close();
+            });
+
+            cancelButton.addEventListener("click", function() {
+                dialog.close();
+            });
+
+            dialog.addEventListener("close", function() {
+                dialog.remove();
+            });
+
+            dialog.showModal();
+            });
         </script>
 </body>
